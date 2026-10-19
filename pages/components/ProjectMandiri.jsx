@@ -10,16 +10,20 @@ import webInventoriBarangReact from "../../public/Web Inventori Barang React.png
 import webFood from "../../public/Web Food Order.png";
 import ArusDana from "../../public/Arus_dana_2.png";
 
-export default function ProjectMandiri() {
+export default function ProjectMandiri({ language }) {
+  const english = language === "en";
+
   return (
     <>
       <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
         {/* Card 1: Perpustakaan Digital */}
         <MyProject
           src={web1}
-          h2={"Perpustakaan Digital"}
+          h2={english ? "Digital Library" : "Perpustakaan Digital"}
           p={
-            "Membuat sistem perpustakaan dengan Vue sebagai front end dan php sebagai backend nya"
+            english
+              ? "A library management system built with Vue on the frontend and PHP on the backend."
+              : "Membuat sistem perpustakaan dengan Vue sebagai front end dan php sebagai backend nya"
           }
         >
           {/* Tech Stack Inclusion */}
@@ -40,9 +44,11 @@ export default function ProjectMandiri() {
         {/* Card 2: Text To Speech Bahasa Minang */}
         <MyProject
           src={web2}
-          h2={"Text To Speech Bahasa Minang"}
+          h2={english ? "Minangkabau Text-to-Speech" : "Text To Speech Bahasa Minang"}
           p={
-            "Membuat Sistem Text To Speech Bahasa Minang Dengan Menggunakan Metode VITS"
+            english
+              ? "A Minangkabau text-to-speech system built using the VITS method."
+              : "Membuat Sistem Text To Speech Bahasa Minang Dengan Menggunakan Metode VITS"
           }
           hrefGithub={
             "https://colab.research.google.com/drive/1VrueknvZBkWUxxGbbLEdcZ8yZZjkCEg7#scrollTo=TSkVk0MpUGpi"
@@ -70,7 +76,11 @@ export default function ProjectMandiri() {
         <MyProject
           src={web3}
           h2={"Making A Game"}
-          p={"Membuat Game RPG 2D Dengan Menggunakan RPG Maker MV"}
+          p={
+            english
+              ? "A 2D role-playing game created with RPG Maker MV."
+              : "Membuat Game RPG 2D Dengan Menggunakan RPG Maker MV"
+          }
           hrefGithub={"https://github.com/BintangFauzan/Inventori"}
         >
           {/* Tech Stack Inclusion */}
@@ -86,11 +96,13 @@ export default function ProjectMandiri() {
         {/* Card 4: Web inventori */}
         <MyProject
           src={webInventori}
-          h2={"Web inventori"}
+          h2={english ? "Inventory Management Website" : "Web inventori"}
           href={"https://github.com/BintangFauzan/The-Letter"}
           p={
-            "'Membuat web inventori barang dengan menggunakna laravel 11, ' +\n" +
-            "                    'web sudah memiliki fungsi login serta logika untuk perhitungan penambahan barang"
+            english
+              ? "An inventory management website built with Laravel 11, featuring user login and logic for tracking stock additions."
+              : "'Membuat web inventori barang dengan menggunakna laravel 11, ' +\n" +
+                "                    'web sudah memiliki fungsi login serta logika untuk perhitungan penambahan barang"
           }
         >
           {/* Tech Stack Inclusion */}
@@ -108,10 +120,12 @@ export default function ProjectMandiri() {
         {/* Card 5: Web Perkiraan Cuaca Dengan React */}
         <MyProject
           src={webCuaca}
-          h2={"Web Perkiraan Cuaca Dengan React"}
+          h2={english ? "React Weather Forecast Website" : "Web Perkiraan Cuaca Dengan React"}
           p={
-            "Membuat Web Perkiraan Cuaca Dengan React dimana sudah terhubung dengan API dari https://www.weatherapi.com/" +
-            "API akan berakhir pada 9 mei 2025"
+            english
+              ? "A React weather forecast website connected to the WeatherAPI service. The API subscription expired on May 9, 2025."
+              : "Membuat Web Perkiraan Cuaca Dengan React dimana sudah terhubung dengan API dari https://www.weatherapi.com/" +
+                "API akan berakhir pada 9 mei 2025"
           }
         >
           {/* Tech Stack Inclusion */}
@@ -129,10 +143,16 @@ export default function ProjectMandiri() {
         {/* Card 6: Web inventori Barang React */}
         <MyProject
           src={webInventoriBarangReact}
-          h2={"Web inventori Barang React dengan laravel 11 sebagai backend"}
+          h2={
+            english
+              ? "React Inventory Website with a Laravel 11 Backend"
+              : "Web inventori Barang React dengan laravel 11 sebagai backend"
+          }
           p={
-            "Membuat Web inventori barang menggunakan react di frontend dan backend menggunakan laravel 11," +
-            "Dimana API sudah bisa untuk tambah, edit, hapus"
+            english
+              ? "An inventory management website built with React on the frontend and Laravel 11 on the backend, with API support for creating, editing, and deleting items."
+              : "Membuat Web inventori barang menggunakan react di frontend dan backend menggunakan laravel 11," +
+                "Dimana API sudah bisa untuk tambah, edit, hapus"
           }
         >
           {/* Tech Stack Inclusion */}
@@ -153,10 +173,14 @@ export default function ProjectMandiri() {
         <MyProject
           src={webFood}
           h2={
-            "Web pesan antar makanan dibuat dengan menggunakan React dan Laravel 12"
+            english
+              ? "A food delivery website built with React and Laravel 12."
+              : "Web pesan antar makanan dibuat dengan menggunakan React dan Laravel 12"
           }
           p={
-            "Usaha yang bergerak dibidang makanan terutama pesan antar dapat menggunakan web ini karna sudah memiliki API yang rapi dan terintegrasi dengan baik customer dapat langsung memesan makanan dan pesanan dengan cepat langsung akan masuk ke admin. web sudah sangat intuitif dan responsive untuk semua gadget"
+            english
+              ? "Designed for food businesses offering delivery, this website features a well-structured, integrated API. Customers can place orders easily, and orders are sent directly to the admin team. The responsive interface works across devices."
+              : "Usaha yang bergerak dibidang makanan terutama pesan antar dapat menggunakan web ini karna sudah memiliki API yang rapi dan terintegrasi dengan baik customer dapat langsung memesan makanan dan pesanan dengan cepat langsung akan masuk ke admin. web sudah sangat intuitif dan responsive untuk semua gadget"
           }
         >
           {/* Tech Stack Inclusion */}
@@ -181,9 +205,17 @@ export default function ProjectMandiri() {
         {/* Card 8: Arus Dana */}
         <MyProject
           src={ArusDana}
-          h2={"Aplikasi android bernama Arus Dana dibuat dengan React Native"}
+          h2={
+            english
+              ? "Arus Dana - Personal Finance App"
+              : "Aplikasi android bernama Arus Dana dibuat dengan React Native"
+          }
           p={`
-                     Aplikasi ini berfokus pada kesederhanaan sambil menyediakan fitur-fitur canggih seperti pelacakan pengeluaran berbantuan AI dan analisis finansial secara real-time. Ini telah menjadi pengalaman belajar yang luar biasa dalam membangun aplikasi mobile yang siap produksi dengan praktik React Native modern.
+                     ${
+                       english
+                         ? "A personal finance app that pairs a simple interface with advanced features, including AI-assisted expense tracking and real-time financial insights. Building it was a valuable opportunity to apply modern React Native practices to a production-ready mobile app."
+                         : "Aplikasi ini berfokus pada kesederhanaan sambil menyediakan fitur-fitur canggih seperti pelacakan pengeluaran berbantuan AI dan analisis finansial secara real-time. Ini telah menjadi pengalaman belajar yang luar biasa dalam membangun aplikasi mobile yang siap produksi dengan praktik React Native modern."
+                     }
                      `}
         >
           {/* Tech Stack Inclusion */}

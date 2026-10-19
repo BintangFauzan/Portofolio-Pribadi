@@ -145,6 +145,12 @@ a {
     transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
+.language-toggle {
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
 .header-button:hover {
     transform: translateY(-2px);
     border-color: var(--muted);
@@ -520,9 +526,13 @@ a {
         font-size: 0.92rem;
     }
 
+    .header-actions {
+        gap: 8px;
+    }
+
     .header-button {
-        width: 42px;
-        height: 42px;
+        width: 40px;
+        height: 40px;
     }
 
     .portfolio-nav {
