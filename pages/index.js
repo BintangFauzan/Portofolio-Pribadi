@@ -232,7 +232,7 @@ export default function Home() {
           </div>
           <a
             className="resume-button"
-            href="https://drive.google.com/file/d/1bKeMw5O4PU0AqeyT5vrOgDlgriGYbpVi/view?usp=drive_link"
+            href="https://drive.google.com/drive/folders/1xnKduLcUFc2bQUSXwt3tlTCw4iew_3J6?usp=sharing"
             rel="noreferrer"
             target="_blank"
           >
